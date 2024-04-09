@@ -151,14 +151,16 @@ text-align:left;  }
 /* quiz container div family, from GPT */
 .quiz-container {
   /* max-width: 600px; */
-  margin: 50px auto;
+  /* margin: 50px auto; */
   text-align: center;
-  margin-top: 200px; 
+  /* margin-top: 200px;  */
+  justify-items: space-around;
 }
 
 .question-container {
   display: flex;
   flex-direction: column;
+  
 }
 
 .question {
@@ -174,11 +176,10 @@ text-align:left;  }
 
 .choice {
   padding: 10px 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
+  /* border: 2px solid #ccc; */
+  /* border-radius: 10px; */
   cursor: pointer;
   transition: background-color 0.3s;
-  position: relative;
   
   /* margin-bottom: 20px;  */
   /* Adjust as needed to separate each choice */
@@ -196,7 +197,8 @@ text-align:left;  }
 /* would it even work is the question */
  
 .choice img {
-  max-width: 100px; 
+  max-width: 50%; 
+  /* max width here influences small phones */
   height: auto;
   display: block;
   margin: 0 auto;
@@ -235,12 +237,26 @@ text-align:left;  }
   /* start of medium tablet styles */
   html{font-size:2.6vw;}
   
+.choice img {
+  max-width: auto; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} 
+
+  
 }
 
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
   /* start of large tablet styles */
 html{font-size:1.9vw;}
+.choice img {
+  max-width: initial; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} 
 }
 
  
@@ -249,33 +265,19 @@ html{font-size:1.9vw;}
 
   /* start of desktop styles */
  
- html{font-size:20px;}
+ html{font-size:2vw;}
  
-.question-container {
+.choices {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
-
-
-
-  /* copied over, maybe will be repurposed */
-
-  /* flex container*/
-/*   
-.flex-container-column{ 
- 
-display:flex;
-flex-direction: column;}
- 
-
-  
-.flex-container-row{
-display:flex; 
-flex-direction: row;
-
-margin-bottom: 5vh;
-max-width:100%; } */
-
+.choice img {
+  max-width: auto; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} 
 
 }
 
