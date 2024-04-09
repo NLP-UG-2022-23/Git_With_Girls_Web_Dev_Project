@@ -1,22 +1,25 @@
 const userSelections = {};
-const cuisineList = [{"question_id":'question0', "culture":'Italian',"images":["https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", ""]},
-{"question_id":'question1', "culture":'Polish',"images":["https://images.pexels.com/photos/4084924/pexels-photo-4084924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", ""]},
-{"question_id":'question2', "culture":'Greek',"images":["https://images.pexels.com/photos/434258/pexels-photo-434258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", ""]},
-{"question_id":'question3', "culture":'Japanese',"images":["https://images.pexels.com/photos/628776/pexels-photo-628776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", ""]},
-{"question_id":'question4', "culture":'Thai',"images":["https://images.pexels.com/photos/12481161/pexels-photo-12481161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", ""]},
-{"question_id":'question5', "culture":'Chinese',"images":["https://images.pexels.com/photos/955137/pexels-photo-955137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", ""]},
-{"question_id":'question6', "culture":'French',"images":["https://images.pexels.com/photos/8350198/pexels-photo-8350198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", ""]},
-{"question_id":'question7', "culture":'American',"images":["https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", ""]},]
+const cuisineList = [{"question_id":'question0', "culture":'Italian',"images":["https://images.pexels.com/photos/1438672/pexels-photo-1438672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/769969/pexels-photo-769969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]},
+{"question_id":'question1', "culture":'Polish',"images":["https://images.pexels.com/photos/4084924/pexels-photo-4084924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/4202385/pexels-photo-4202385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/6133/food-polish-cooking-making.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]},
+{"question_id":'question2', "culture":'Greek',"images":["https://images.pexels.com/photos/434258/pexels-photo-434258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/726001/pexels-photo-726001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]},
+{"question_id":'question3', "culture":'Japanese',"images":["https://images.pexels.com/photos/628776/pexels-photo-628776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/359993/pexels-photo-359993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/3763814/pexels-photo-3763814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]},
+{"question_id":'question4', "culture":'Thai',"images":["https://images.pexels.com/photos/12481161/pexels-photo-12481161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/10756648/pexels-photo-10756648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/6454806/pexels-photo-6454806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]},
+{"question_id":'question5', "culture":'Chinese',"images":["https://images.pexels.com/photos/955137/pexels-photo-955137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/3054690/pexels-photo-3054690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/1028734/pexels-photo-1028734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]},
+{"question_id":'question6', "culture":'French',"images":["https://images.pexels.com/photos/8350198/pexels-photo-8350198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/3850431/pexels-photo-3850431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/8350663/pexels-photo-8350663.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]},
+{"question_id":'question7', "culture":'American',"images":["https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/4676400/pexels-photo-4676400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/4790307/pexels-photo-4790307.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]},]
 
 
 function pickImage (whatIdToRoll)
 {
-    //currently we only have one image per cuisine so commenting out the randomising part
     let number=parseInt(whatIdToRoll.charAt(8))
-    // let randomElement = cuisineList[number].images[Math.floor(Math.random() * cuisineList[number].images.length)];
-    // return randomElement;
+    let randomElement = cuisineList[number].images[Math.floor(Math.random() * cuisineList[number].images.length)];
+    if (randomElement===undefined)
+    {
+        return cuisineList[number].images[0];
+        //fallback option
+    }
+    else   {return randomElement;}
 
-    return cuisineList[number].images[0];
 }
 
 
