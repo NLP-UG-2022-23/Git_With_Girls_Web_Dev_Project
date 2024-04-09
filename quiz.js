@@ -50,6 +50,7 @@ function nextQuestion(selectedChoice, nextQuestionId,selectedChoicePicture) {
         questionContainer.innerHTML = `
                 <div class="result">
                     <p>It looks like you're in the mood for ${finalCuisine} cuisine!</p>
+                    <p>Redirecting to restaurant choice page...</p>
                 </div>
             `;
         
