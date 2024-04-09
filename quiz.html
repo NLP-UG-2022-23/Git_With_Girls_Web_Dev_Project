@@ -14,17 +14,13 @@
   <div class="quiz-container">
     <div class="question-container" id="question-container">
         <!-- Initial question -->
-        <div class="question" id="question1">
-            <p>Italian or Polish?</p>
-            <div class="choices">
-                <div class="choice" onclick="nextQuestion('Italian', 'question2')">Italian
-                </div>
-
-                <div class="choice" onclick="nextQuestion('Polish', 'question2')">Polish</div>
-            </div>
-        </div>
+        
     </div>
-
+<script>
+    
+    let firstPicture=(pickImage('question0'));
+    changeInnerHtmlAddImages('Italian','Polish','question1',firstPicture)
+</script>
 </body>
 
 </html>
