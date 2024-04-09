@@ -46,6 +46,12 @@ function nextQuestion(selectedChoice, nextQuestionId,selectedChoicePicture) {
                     <p>It looks like you're in the mood for ${finalCuisine} cuisine!</p>
                 </div>
             `;
+        
+            // timing of changing page 
+            setTimeout(() => {
+                window.location.href = 'restaurant.html';
+            }, 3000);
+
             //gives the result and terminates the question iteration, ends the recursive main function
         return;}
 
