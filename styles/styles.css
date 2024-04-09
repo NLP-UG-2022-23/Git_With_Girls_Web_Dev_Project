@@ -1,14 +1,24 @@
+
+/* start of phone styles */
+
+
+/* other html selectors only for font sizes in @media */
 html {
   box-sizing: border-box;
     color: white;
 
 }
 
+/* not sure if we're using this font */
+
 .madimi-one-regular {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
+
+/* body also changes the font size */
 
 body {
   padding: 0px;
@@ -19,33 +29,88 @@ body {
 }
  
   
+/* index.html text content formatting */
+/* currently this is geared towards pc users */
+.main-content {
+  text-align: center;
+
+  margin-top: 100px; 
+}
+
+.hungry-text {
+  font-size: 50px;
+  color: #E6E2E2;
+}
+
+.decide-text {
+  font-size: 40px; 
+  color: #FFFFFF;
+}
+
+
+
+/* start the quiz link */
+.centered-link {
+  margin-top: 20px; 
+}
+
+.centered-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.centered-link a:hover {
+  background-color: #999;
+}
+/* start the quiz link above*/
+
+/* "start quiz" animation  below*/
+.above-slide,
+.below-slide {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.above-slide {
+  animation: fade 7s infinite;
+}
+
+.below-slide {
+  animation: slide 7s infinite;
+}
+
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0%, 100% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+}
+
+ /* "start quiz" animation above */
+
+
   
-/* start of phone styles */
 
-#middle-fixed {
-position:fixed; 
-left:50%;
-top:18%;
-}
-
-#exclamation{
-position:fixed; 
-left:30%;
-top:24%;}
-
-#start-the-quiz{
-position:fixed; 
-left:30%;
-top:38%;}
-    
-
-
-
-section {
-  text-align:justify;
-  margin: 15px 0 10px 0;
-}
-
+/* copied over, maybe will be repurposed */
+/* 
 .flex-container-row{
   
 margin: 0;
@@ -71,45 +136,110 @@ margin-bottom: 3px; }
 text-align:left;  }
 
 
+.flex-container-row img{max-width:100%;
+}
+  
+  
+.flex-container-column img{
+  height:100px;
+  max-width:100%;} */
+
+
+
+
+
+/* quiz container div family, from GPT */
+.quiz-container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  margin-top: 200px; 
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.choice {
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  
+  /* margin-bottom: 20px;  */
+  /* Adjust as needed to separate each choice */
+}
+
+/* this one is for text choices */
+.choice:hover {
+  background-color: #f0f0f0;
+  color: #ccc;
+}/* this one is for text choices */
+
+
+
+/* new portion of quiz css, for images */
+/* would it even work is the question */
+/* 
+.choice img {
+  max-width: 100px; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} */
+
+
+/* do we want tooltips though */
+/* .tooltip {
+  position: absolute;
+  bottom: -20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.choice:hover .tooltip {
+  display: block;
+} */
+
+/* do we want tooltips though */
+
+
+
+
+
+/* quiz container div family, from GPT */
+
+
+
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
   /* start of medium tablet styles */
   html{font-size:2.6vw;}
-  
-
-section
-{
-max-width:600px; }
-
-section > em, li > em{
-font-size:2.7vw;}
- 
-
-.flex-container-row figure{max-width:100%;
-padding:0;
-margin:0;}
 }
 
-.flex-container-row img{max-width:100%;
-}
-  
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
   /* start of large tablet styles */
 html{font-size:1.9vw;}
-   
-  #search {
-    width: 60%;
-    max-width: 400px;
-  }
-
-section
-{
-max-width:600px; }
-
-section > em, li > em{
-font-size:2vw;}
-
 }
 
  
@@ -118,15 +248,13 @@ font-size:2vw;}
 
   /* start of desktop styles */
  
- 
  html{font-size:20px;}
-  
-section
-{
-max-width:50%; }
+
+
+  /* copied over, maybe will be repurposed */
 
   /* flex container*/
-  
+/*   
 .flex-container-column{ 
  
 display:flex;
@@ -139,88 +267,13 @@ display:flex;
 flex-direction: row;
 
 margin-bottom: 5vh;
-max-width:100%; }
+max-width:100%; } */
 
-.flex-container-row section , .flex-container-row h3 {
-width:50%;
-margin: 0;
-padding: 0;} 
-  
-.flex-container-column img{
-max-width:100%;}
 
 }
 
-        .quiz-container {
-            max-width: 600px;
-            margin: 50px auto;
-            text-align: center;
-            margin-top: 200px; 
-        }
 
-        .question-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .question {
-            margin-bottom: 20px;
-        }
-
-        .choices {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .choice {
-            padding: 10px 20px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .choice:hover {
-            background-color: #f0f0f0;
-            color: #ccc;
-        }
-
-        /* styles.css */
-
-.main-content {
-  text-align: center;
-  margin-top: 200px; 
-}
-
-
-.centered-link {
-  margin-top: 20px; 
-}
-
-.centered-link a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ccc;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #fff;
-  transition: background-color 0.3s;
-}
-
-.centered-link a:hover {
-  background-color: #999;
-}
-
-
-
-
-.main-content {
-  text-align: center;
-  margin-top: 100px; 
-}
-
+/* topnav for pc i suppose*/
 .topnav {
   overflow: hidden;
   background-color: rgba(70, 68, 64, 0.5);
@@ -245,45 +298,6 @@ max-width:100%;}
   color: white;
 }
 
-.hungry-text {
-  font-size: 50px;
-  color: #E6E2E2;
-}
 
-.decide-text {
-  font-size: 40px; 
-  color: #FFFFFF;
-}
+/* topnav */
 
-.above-slide,
-.below-slide {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.above-slide {
-  animation: fade 7s infinite;
-}
-
-.below-slide {
-  animation: slide 7s infinite;
-}
-
-@keyframes fade {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes slide {
-  0%, 100% {
-    transform: translateY(-100%);
-  }
-  50% {
-    transform: translateY(0%);
-  }
-}
