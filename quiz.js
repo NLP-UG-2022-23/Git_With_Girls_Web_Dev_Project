@@ -9,12 +9,17 @@ const cuisineList = [{"question_id":'question0', "culture":'Italian', "images":[
 {"question_id":'question7', "culture":'American', "images":["https://images.unsplash.com/photo-1602030638412-bb8dcc0bc8b0", "https://images.pexels.com/photos/4676419/pexels-photo-4676419.jpeg"]}
 ]
 
-//const randomElement = array[Math.floor(Math.random() * array.length)];
-//use sth like this to implement the random pic thing
+
+function pickImage (whatIdToRoll)
+{
+    let number=parseInt(whatIdToRoll.charAt(8))
+    let randomElement = cuisineList[number].images[Math.floor(Math.random() * cuisineList[number].images.length)];
+    return randomElement;
+}
 
 
 
-function nextQuestion(selectedChoice, nextQuestionId) {
+function nextQuestion(selectedChoice, nextQuestionId,selectedChoicePicture) {
     const questionContainer = document.getElementById('question-container');
 
     // Store user's selection
@@ -44,14 +49,22 @@ function nextQuestion(selectedChoice, nextQuestionId) {
             //gives the result and terminates the question iteration, ends the recursive main function
         return;}
 
+        //new question
+
+        changeInnerHtmlAddImages(selectedChoice,nextCuisine,nextQuestionId,selectedChoicePicture)
+        }
+
+function changeInnerHtmlAddImages (selectedChoice,nextCuisine,nextQuestionId,selectedChoicePicture){
+
+    const questionContainer = document.getElementById('question-container');
+    let nextPicture = pickImage(nextQuestionId);
     questionContainer.innerHTML = `
         <div class="question" id="${nextQuestionId}">
             <p>${selectedChoice} or ${nextCuisine}?</p>
             <div class="choices">
-                <div class="choice" onclick="nextQuestion('${selectedChoice}', 'question${parseInt(nextQuestionId.charAt(8)) + 1}')">${selectedChoice}</div>
-                <div class="choice" onclick="nextQuestion('${nextCuisine}', 'question${parseInt(nextQuestionId.charAt(8)) + 1}')">${nextCuisine}</div>
+                <div class="choice" onclick="nextQuestion('${selectedChoice}', 'question${parseInt(nextQuestionId.charAt(8)) + 1}','${selectedChoicePicture}')">${selectedChoice} <img src="${selectedChoicePicture}"></div>
+                <div class="choice" onclick="nextQuestion('${nextCuisine}', 'question${parseInt(nextQuestionId.charAt(8)) + 1}','${nextPicture}')">${nextCuisine} <img src="${nextPicture}"></div>
             </div>
         </div>
     `;
-
-        }
+}

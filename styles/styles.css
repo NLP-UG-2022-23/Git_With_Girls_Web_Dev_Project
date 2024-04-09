@@ -150,7 +150,7 @@ text-align:left;  }
 
 /* quiz container div family, from GPT */
 .quiz-container {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 50px auto;
   text-align: center;
   margin-top: 200px; 
@@ -187,20 +187,20 @@ text-align:left;  }
 /* this one is for text choices */
 .choice:hover {
   background-color: #f0f0f0;
-  color: #ccc;
+  color: #000000;
 }/* this one is for text choices */
 
 
 
 /* new portion of quiz css, for images */
 /* would it even work is the question */
-/* 
+ 
 .choice img {
   max-width: 100px; 
   height: auto;
   display: block;
   margin: 0 auto;
-} */
+} 
 
 
 /* do we want tooltips though */
@@ -234,6 +234,7 @@ text-align:left;  }
 @media screen and (min-width: 481px) and (max-width: 767px) {
   /* start of medium tablet styles */
   html{font-size:2.6vw;}
+  
 }
 
 
@@ -249,6 +250,12 @@ html{font-size:1.9vw;}
   /* start of desktop styles */
  
  html{font-size:20px;}
+ 
+.question-container {
+  display: flex;
+  flex-direction: row;
+}
+
 
 
   /* copied over, maybe will be repurposed */
