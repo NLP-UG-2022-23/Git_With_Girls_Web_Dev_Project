@@ -26,6 +26,7 @@ body {
   font-size:1.2rem;
   background-image: url('../images/bg/cropped-burrito1.jpg');
   background-size: 100%;
+
 }
  
   
@@ -187,7 +188,7 @@ text-align:left;  }
 
 /* this one is for text choices */
 .choice:hover {
-  background-color: #f0f0f0;
+  background-color: none;
   color: #000000;
 }/* this one is for text choices */
 
@@ -197,12 +198,19 @@ text-align:left;  }
 /* would it even work is the question */
  
 .choice img {
-  max-width: 50%; 
+  max-width: 60%; 
   /* max width here influences small phones */
   height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
 } 
+
+.circle-image:hover {
+  background: none;
+  outline: none;
+}
 
 
 /* do we want tooltips though */
@@ -242,6 +250,9 @@ text-align:left;  }
   height: auto;
   display: block;
   margin: 0 auto;
+  /* is this ok here Janek pls respond */
+  border-radius: 50%;
+  object-fit: cover;
 } 
 
   
@@ -256,6 +267,9 @@ html{font-size:1.9vw;}
   height: auto;
   display: block;
   margin: 0 auto;
+  /* is this ok here Janek pls respond */
+  border-radius: 50%;
+  object-fit: cover;
 } 
 }
 
@@ -277,6 +291,9 @@ html{font-size:1.9vw;}
   height: auto;
   display: block;
   margin: 0 auto;
+  /* is this ok here Janek pls respond */
+  border-radius: 50%;
+  object-fit: cover;
 } 
 
 }
@@ -354,4 +371,25 @@ html{font-size:1.9vw;}
 
 .container button[type="submit"]:hover {
   background-color: #0056b3;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+select {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #888;  
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
 }
