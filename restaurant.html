@@ -15,7 +15,7 @@
         <h2>Tell us where you are!</h2>
         <form id="locationForm">
             <label for="location">Select your district:</label>
-            <select id="location" name="location">
+            <select id="locationSelect" name="location">
                 <option value="" disabled selected>Select your district...</option>
                 <option value="district1">Wrzeszcz</option>
                 <option value="district2">Przymorze</option>
@@ -34,9 +34,14 @@
         </form>
     </div>
 </body>
-<script>console.log(sessionStorage.getItem("quizResult"));
-
-
+<script>
+console.log(sessionStorage.getItem("quizResult"));
+var e = document.getElementById("locationSelect");
+e.onchange = function() 
+{
+var selectedDistrict = e.options[e.selectedIndex].value; 
+console.log('You selected: ', strUser);
+}
 
 </script>
 </html>
