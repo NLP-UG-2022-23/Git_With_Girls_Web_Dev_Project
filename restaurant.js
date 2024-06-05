@@ -1,7 +1,7 @@
 
 function changeInnerHtmlRestaurantChoice (selectedDistrict,selectedCuisine){
 
-    const restaurantContainer = document.getElementsByClassName('container');
+    const restaurantContainer = document.getElementsById('restaurant-container');
     restaurantContainer.innerHTML = `
         <h2>Nearby ${selectedCuisine} restaurants for ${selctedDistrict}</h2>
         <table>
