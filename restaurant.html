@@ -6,43 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Choice</title>
     <link rel="stylesheet" href="./styles/styles.css">
-
-    <script src="restaurant.js"></script>
 </head>
 
 <body>
     <div class="container" id="restaurant-container">
-        <h2>Tell us where you are!</h2>
+        <h2>Gdzie idziesz jeść!</h2>
         <form id="locationForm">
-            <label for="location">Select your district:</label>
+            <label for="location">Wybierz dzielnicę:</label>
             <select id="locationSelect" name="location">
-                <option value="" disabled selected>Select your district...</option>
-                <option value="district1">Wrzeszcz</option>
-                <option value="district2">Przymorze</option>
-                <option value="district3">Oliwa</option>
-                <option value="district4">Orunia</option>
-                <option value="district5">Brzeźno</option> 
-                <option value="district6">Chełm</option> 
-                <option value="district7">Stogi</option> 
-                <option value="district8">Osowa</option> 
-                <option value="district9">Jasień</option>   
-                <option value="district10">Śródmieście</option> 
-                <option value="district11">Zaspa</option>     
-                <option value="district12">Łostowice</option>          
+                <option value="" disabled selected>Wybierz dzielnicę...</option>
+                <option value="Wrzeszcz">Wrzeszcz</option>
+                <option value="Przymorze">Przymorze</option>
+                <option value="Oliwa">Oliwa</option>
+                <option value="Orunia">Orunia</option>
+                <option value="Brzeźno">Brzeźno</option> 
+                <option value="Chełm">Chełm</option> 
+                <option value="Stogi">Stogi</option> 
+                <option value="Osowa">Osowa</option> 
+                <option value="Jasień">Jasień</option>   
+                <option value="Śródmieście">Śródmieście</option> 
+                <option value="Zaspa">Zaspa</option>     
+                <option value="Łostowice">Łostowice</option>          
             </select>
-            <button type="submit">Submit</button>
+			<!-- <button id="locationSelect" type="submit">Dalej</button> -->
         </form>
     </div>
 </body>
 <script>
-console.log(sessionStorage.getItem("quizResult"));
-var e = document.getElementById("locationSelect");
-e.onchange = function() 
-{
-var selectedDistrict = e.options[e.selectedIndex].value; 
-console.log('You selected: ', strUser);
-}
-
-</script>
+console.log('wybrana kuchnia: ',sessionStorage.getItem("quizResult"));</script>
+ <script src="restaurant.js"></script>
 </html>
 
