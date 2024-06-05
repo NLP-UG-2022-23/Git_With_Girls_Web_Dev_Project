@@ -26,6 +26,7 @@ body {
   font-size:1.2rem;
   background-image: url('../images/bg/cropped-burrito1.jpg');
   background-size: 100%;
+  font-family: system-ui;
 
 }
  
@@ -166,6 +167,8 @@ text-align:left;  }
 
 .question {
   margin-bottom: 20px;
+  font-weight: 700;
+  color: #385c38;
 }
 
 .choices {
@@ -173,6 +176,7 @@ text-align:left;  }
   flex-direction: column;
   gap: 10px;
   justify-content: center;
+  font-weight: 600;
 }
 
 .choice {
@@ -189,7 +193,7 @@ text-align:left;  }
 /* this one is for text choices */
 .choice:hover {
   background-color: none;
-  color: #000000;
+  color: #ffffff;
 }/* this one is for text choices */
 
 
@@ -301,6 +305,7 @@ html{font-size:1.9vw;}
 
 /* topnav for pc i suppose*/
 .topnav {
+  font-size: 20px;
   overflow: hidden;
   background-color: rgba(70, 68, 64, 0.5);
 }
