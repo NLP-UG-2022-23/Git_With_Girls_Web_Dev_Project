@@ -400,3 +400,38 @@ button {
   font-size: 16px;
   margin-top: 20px;
 }
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em; /* Make the font smaller */
+    color: black; /* Change font color to black */
+    text-align: left;
+    background-color: #f3f3f3;
+}
+
+th, td {
+    padding: 10px; /* Adjust padding if necessary */
+    border: 1px solid #ddd;
+    color: black; /* Ensure the font color is black */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* No highlights for specific rows */
+tr.no-highlight:hover {
+    background-color: inherit;
+}
