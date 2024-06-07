@@ -46,7 +46,7 @@ function changeInnerHtmlRestaurantChoice(selectedCuisine,selectedDistrict){
 	
 const restaurantContainer = document.getElementById('restaurant-container');
 restaurantContainer.innerHTML = `<h2>Restauracja ${selectedCuisine} ${selectedDistrict}</h2>
-<p>Loading please wait</p>`
+<p>Ładowanie proszę czekać</p>`
 
 const data = null;
 var url=getURL(selectedCuisine,selectedDistrict);
@@ -70,8 +70,8 @@ xhr.addEventListener('readystatechange', function () {
         <h2>Restauracja ${selectedCuisine} ${selectedDistrict}</h2>
         <table>
             <tr>
-              <th>Name</th>
-              <th>Address</th>
+              <th>Nazwa</th>
+              <th>Adres</th>
             </tr>`
 	for (let i = 0 ; i < 5 ; i++){
 		pasteIn+=`
