@@ -26,7 +26,8 @@ function getURL(selectedCuisine, selectedDistrict) {
 
     for (let x of districts) {
         if (selectedDistrict === x["districtName"]) {
-            url += `&lat=${x["lat"]}&lng=${x["lng"]}&limit=5&language=pl&region=pl`;
+            url += `&lat=${x["lat"]}&lng=${x["lng"]}&limit=3&language=pl&region=pl`;
+			//change the number of restauarants here ^ limit =x
             return url;
         }
     }
@@ -41,7 +42,7 @@ function changeInnerHtmlRestaurantChoice(selectedCuisine, selectedDistrict) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', url);
 
-    xhr.setRequestHeader('x-rapidapi-key', '8f28b2e0dbmshbfab90bd82a890dp1e7a0ajsn2c0482aaa7e5');
+    xhr.setRequestHeader('x-rapidapi-key', '0eab28cc7fmshd12412eef43bae6p144ef1jsn55b5128ff4b6');
     xhr.setRequestHeader('x-rapidapi-host', 'local-business-data.p.rapidapi.com');
     
     xhr.send(data);
@@ -60,6 +61,7 @@ function changeInnerHtmlRestaurantChoice(selectedCuisine, selectedDistrict) {
                                 <th>Nazwa</th>
                                 <th>Adres</th>
                                 <th>Link</th>
+								<th class="hide-smol-screen">Otwarta?</th>
                             </tr>
                         </thead>
                         <tbody>`;
@@ -68,6 +70,8 @@ function changeInnerHtmlRestaurantChoice(selectedCuisine, selectedDistrict) {
                             <tr>
                                 <td>${jsonResponse.data[i].name}</td>
                                 <td>${jsonResponse.data[i].address}</td>
+                                <td><a href="${jsonResponse.data[i].place_link}" target="_blank">Zobacz na mapie</a></td>
+								<td class="hide-smol-screen">${jsonResponse.data[i].opening_status}</td>
                             </tr>`;
                 }
                 pasteIn += `
