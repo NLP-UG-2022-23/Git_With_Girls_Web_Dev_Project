@@ -73,7 +73,7 @@ function changeInnerHtmlAddImages (selectedChoice,nextCuisine,nextQuestionId,sel
     let nextPicture = pickImage(nextQuestionId);
     questionContainer.innerHTML = `
         <div class="question" id="${nextQuestionId}">
-            <p>${selectedChoice} or ${nextCuisine}?</p>
+            <p>${selectedChoice} czy ${nextCuisine}?</p>
             <div class="choices">
                 <div class="choice" onclick="nextQuestion('${selectedChoice}', 'question${parseInt(nextQuestionId.charAt(8)) + 1}','${selectedChoicePicture}')">${selectedChoice} <img src="${selectedChoicePicture}"></div>
                 <div class="choice" onclick="nextQuestion('${nextCuisine}', 'question${parseInt(nextQuestionId.charAt(8)) + 1}','${nextPicture}')">${nextCuisine} <img src="${nextPicture}"></div>

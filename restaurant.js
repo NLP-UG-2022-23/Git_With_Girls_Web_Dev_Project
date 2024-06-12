@@ -61,7 +61,7 @@ function changeInnerHtmlRestaurantChoice(selectedCuisine, selectedDistrict) {
                                 <th>Nazwa</th>
                                 <th>Adres</th>
                                 <th>Link</th>
-								<th class="hide-smol-screen">Otwarta?</th>
+								<th class="hide-smol-screen">Godziny otwarcia</th>
                             </tr>
                         </thead>
                         <tbody>`;
