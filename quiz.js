@@ -49,7 +49,7 @@ function nextQuestion(selectedChoice, nextQuestionId,selectedChoicePicture) {
         sessionStorage.setItem("quizResult",finalCuisine);
         questionContainer.innerHTML = `
                 <div class="result">
-                    <p>Wygląda na to, że jesteś w nastroju na ${finalCuisine} kuchnię!</p>
+                    <p>Wygląda na to, że ${finalCuisine} kuchnia jest tym, na co masz ochotę!</p>
                     <p>Przekierowanie do strony wyboru restauracji...</p>
                 </div>
             `;
