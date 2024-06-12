@@ -26,7 +26,7 @@ function getURL(selectedCuisine, selectedDistrict) {
 
     for (let x of districts) {
         if (selectedDistrict === x["districtName"]) {
-            url += `&lat=${x["lat"]}&lng=${x["lng"]}&limit=3&language=pl&region=pl`;
+            url += `&lat=${x["lat"]}&lng=${x["lng"]}&limit=10&language=pl&region=pl`;
 			//change the number of restauarants here ^ limit =x
             return url;
         }
